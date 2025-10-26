@@ -77,6 +77,10 @@ public class BasicJavaTasks {
             char c = str.charAt(idx);
             if (!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'))) {
                 isAlnum = false;
+
+            //if (!Character.isLetterOrDigit(c)) {
+            //return false;}
+            
                 break;
             }
         }
