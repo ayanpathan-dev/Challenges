@@ -54,17 +54,20 @@ public class BasicJavaTasks {
         int[] nums2 = {2, 4, 6};
         int[] merged = new int[nums1.length + nums2.length];
         int i = 0, j = 0, m = 0;
-        for (; i < nums1.length && j < nums2.length;) {
-            if (nums1[i] < nums2[j]) {
-                merged[m++] = nums1[i++];
-            } else {
-                merged[m++] = nums2[j++];
-            }
+       while (i < n1 && j < n2) {
+        if (nums1[i] <= nums2[j]) {
+            merged[m++] = nums1[i++];
+        } else {
+            merged[m++] = nums2[j++];
         }
-        for (; i < nums1.length; i++) merged[m++] = nums1[i];
-        for (; j < nums2.length; j++) merged[m++] = nums2[j];
+    }
+    while (i < n1) merged[m++] = nums1[i++];
+    while (j < n2) merged[m++] = nums2[j++];
         System.out.print("Merged array: ");
-        for (int val : merged) System.out.print(val + " ");
+        
+        for (int val : merged) {
+            System.out.print(val + " ");
+        }
         System.out.println();
 
         // 6️⃣ Check alphanumeric
