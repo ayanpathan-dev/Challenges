@@ -106,10 +106,11 @@ public class EmployeeDaoImpl implements EmployeeDao{
 		@Override
 		public void writefile(File fs) {
 			// TODO Auto-generated method stub
-			try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(fs))){
-				for(Employee e : elist ) {
-					oos.writeObject(e);
-				}
+			try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(fs))) {
+                for(Employee e :elist) {
+                 oos.writeObject(e);
+                }
+			
 			}catch(Exception e) {
 				System.out.println(e);
 			}
