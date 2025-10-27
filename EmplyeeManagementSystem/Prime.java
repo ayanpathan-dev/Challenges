@@ -1,0 +1,34 @@
+package com.logical;
+
+import java.util.*;
+public class Prime {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Number :");
+		int n =sc.nextInt();
+		sc.close();
+		boolean flag = true;
+		if(n<=1) {
+			
+			flag=false;
+			
+		}else {
+		       for(int i =2 ;i<n ;i++) {
+			    if(n%i==0) {
+				flag =false;
+				break;
+			}	
+		  }
+		}
+		if(flag) {
+			System.out.println(n +" Is Prime");
+		}else {
+			System.out.println(n +" Is Not Prime ");
+
+		}
+		
+
+	}
+
+}
